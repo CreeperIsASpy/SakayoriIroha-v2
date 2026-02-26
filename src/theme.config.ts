@@ -1,9 +1,8 @@
-// cannot use path alias here because unocss can not resolve it
 import { defineConfig } from "./toolkit/themeConfig";
 
 export default defineConfig({
-  siteName: "ShokaX",
-  locale: "zh-CN", // 网站语言: "zh-CN" | "en"
+  siteName: "Sakayori Iroha | 酒寄彩叶",
+  locale: "zh-CN", 
   nav: [
     {
       href: "/",
@@ -42,44 +41,40 @@ export default defineConfig({
     },
   ],
   brand: {
-    title: "ShokaX",
-    subtitle: "A modern blog theme",
-    logo: "✨",
+    title: "Sakayori Iroha | 酒寄彩葉",
+    subtitle: "品行端正，成绩优秀，文武双全。只有贯彻无懈可击的完美女高中生形象，我才能向前迈进。",
+    logo: "🦊",
   },
   cover: {
     enable: true,
-    preload: true,
-    // 固定封面模式（可选）：
-    // - enable: 是否启用固定封面
-    // - url: 推荐填 "cover-1" ~ "cover-6"（来自 src/components/Images.astro 预设），
-    //        或者填 public 路径/远程 URL（会使用 <img> 兜底渲染）
+    preload: false,
     fixedCover: {
       enable: true,
-      url: "cover-4",
+      url: "cover-1",
     },
     // gradient: true, // 渐变模式
     nextGradientCover: false, // 文章导航使用渐变背景
   },
   sidebar: {
-    author: "Your Name",
-    description: "A brief introduction",
+    author: "酒寄彩葉",
+    description: "17岁女高中生，文武双全的完美少女。",
     social: {
       github: {
-        url: "https://github.com/yourname",
+        url: "https://github.com/sakayori-iroha",
         icon: "i-ri-github-fill",
       },
       twitter: {
-        url: "https://twitter.com/yourname",
+        url: "https://x.com/iroha_sakayori",
         icon: "i-ri-twitter-x-line",
       },
       email: {
-        url: "mailto:your@email.com",
+        url: "mailto:sakayori-iroha@gmail.com",
         icon: "i-ri-mail-line",
       },
     },
   },
   footer: {
-    since: 2025,
+    since: 2026,
     icon: {
       name: "sakura rotate",
       color: "#ffc0cb",
@@ -89,10 +84,9 @@ export default defineConfig({
     icp: {
       enable: true,
       // icon: '/beian-icon.png',
-      icpnumber: "津ICP备2022001375号",
-      icpurl: "https://beian.miit.gov.cn/",
+      icpnumber: "萌ICP备20268017号",
       // beian: '网安备案号',
-      // recordcode: 'xxxxx',
+      recordcode: '20268017',
     },
   },
   widgets: {
@@ -101,11 +95,9 @@ export default defineConfig({
     recentCommentsLimit: 10,
   },
   comments: {
-    enable: false,
+    enable: true,
     waline: {
-      // 替换为你的 Waline 服务端地址，例如: https://comments.example.com
-      serverURL: "",
-      // 推荐与站点语言保持一致
+      serverURL: "waline.creeperspy.top",
       lang: "zh-CN",
     },
   },
@@ -130,13 +122,13 @@ export default defineConfig({
     },
   },
   nyxPlayer: {
-    enable: false,
+    enable: true,
     preset: "shokax",
     darkModeTarget: ':root[data-theme="dark"]',
     urls: [
       {
-        name: "默认歌单",
-        url: "https://music.163.com/#/playlist?id=2943811283",
+        name: "超かぐや姫！",
+        url: "https://music.163.com/playlist?id=17792174512",
       },
     ],
   },
@@ -149,17 +141,15 @@ export default defineConfig({
   home: {
     selectedCategories: [{ name: "Tutorial" }, { name: "Frontend" }],
     pageSize: 5,
-    title: {
-      behavior: "default",
-      customTitle: "",
-    },
+	title: {
+      behavior: "custom",
+      customTitle: "🦊酒寄彩葉的博客站！"
+    }
   },
   friends: {
     title: "友链",
-    description: "卡片式展示，支持站点预览与主题色点缀。",
-    // avatar: "https://example.com/your-avatar.png",
-    // color: "var(--color-pink)",
-    // siteImage: "https://example.com/your-site-preview.png",
+    description: "友情链接！！！",
+    avatar: "https://www.helloimg.com/i/2025/08/05/6891cf32ea2d9.jpeg",
     links: [
       {
         url: "https://astro.build/",
